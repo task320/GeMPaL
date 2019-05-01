@@ -1,6 +1,6 @@
 let mdLink = ''
 
-let queryInfo = {
+const queryInfo = {
     "active" : true, 
     "currentWindow" : true
 }
@@ -8,7 +8,7 @@ let queryInfo = {
 document.addEventListener('copy', function(e) {
     e.clipboardData.setData('text/plain', mdLink);
     e.preventDefault();
-  });
+});
 
 chrome.commands.onCommand.addListener((command) => {
     chrome.tabs.query(queryInfo, (tab) => {
