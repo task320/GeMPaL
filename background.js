@@ -19,7 +19,7 @@ chrome.commands.onCommand.addListener((command) => {
 
         let title = tab[0].title
         let url = tab[0].url
-        mdLink = '(' + title + ')[' + url + ']'
+        mdLink = '[' + title + '](' + url + ')'
         document.execCommand('copy');
     })
 });
