@@ -1,0 +1,26 @@
+{
+    "name": "GeMPaL",
+    "version": "1.0",
+    "description": "マークダウン表記で、表示しているページのリンクをクリップボードへコピー",
+    "manifest_version": 2,
+    "permissions": [
+        "tabs",
+        "clipboardWrite"
+    ],
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "browser_action": {
+        "default_title": "GeMPaL"
+    },
+    "commands": {
+        "copy-to-clipboard": {
+          "suggested_key": {
+            "default": "Ctrl+Shift+1"
+          },
+          "description": "Copy markdown link to clipboard"
+        }
+    }
+}
+
